@@ -1,11 +1,11 @@
 #!/bin/bash
 
-CMD="/opt/tools/toolbar/copy-target.py"
+CMD="./copy-target.py"
 
 if [[ $1 == "get" ]]; then
-	target_bytes=$(/usr/bin/cat /opt/tools/toolbar/target.txt | /usr/bin/wc -c)
+	target_bytes=$(/usr/bin/cat /tmp/target_cmd_target.txt | /usr/bin/wc -c)
 	if [ $target_bytes -gt 1 ]; then
-		INFO="<icon>redeyes</icon><txt><span fgcolor='White'>$(/usr/bin/cat /opt/tools/toolbar/target.txt)</span></txt>"
+		INFO="<icon>redeyes</icon><txt><span fgcolor='White'>$(/usr/bin/cat /tmp/target_cmd_target.txt)</span></txt>"
 		INFO+="<txtclick>$CMD</txtclick>"
 	else
 		INFO=""
@@ -14,5 +14,5 @@ if [[ $1 == "get" ]]; then
 	echo -e "${INFO}"
 
 else
-	echo $1 > /opt/tools/toolbar/target.txt
+	echo $1 > /tmp/target_cmd_target.txt
 fi
