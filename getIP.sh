@@ -6,7 +6,7 @@ if [[ $1 == "tun" ]]; then
 	if [ $(echo $vpn_ip | wc -c) -gt 3 ]; then
 		echo "<icon>network-vpn-symbolic</icon><txt><span weight='Bold' fgcolor='Yellow'>$vpn_ip</span></txt>"
 		
-		CMD="/opt/tools/toolbar/copy-ip.py wlan0"
+		CMD="./copy-ip.py wlan0"
 		echo "<txtclick>$CMD</txtclick>"
 	else
 		echo ""
@@ -18,7 +18,7 @@ elif [[ $1 == "wlan" ]]; then
 	if [ $private_ip_length -gt 3 ]; then
 		echo "<icon>kali-wifite</icon><txt>$private_ip</txt>"
 
-		CMD="/opt/tools/toolbar/copy-ip.py wlan0"
+		CMD="./copy-ip.py wlan0"
 		echo "<txtclick>$CMD</txtclick>"
 	else
 		echo ""
@@ -30,7 +30,7 @@ else
 	if [ $private_ip_length -gt 3 ]; then
 		echo "<icon>gnome-dev-ethernet</icon><txt>$private_ip</txt>"
 
-		CMD="/opt/tools/toolbar/copy-ip.py eth0"
+		CMD="./copy-ip.py eth0"
 		echo "<txtclick>$CMD</txtclick>"
 	else
 		echo ""
