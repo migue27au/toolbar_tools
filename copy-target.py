@@ -3,5 +3,5 @@
 
 import pyperclip
 
-clipboard_text = open("/opt/tools/toolbar/target.txt").read().replace("\n", "")
+clipboard_text = open("/tmp/target_cmd_target.txt").read().replace("\n", "")
 pyperclip.copy(clipboard_text)
