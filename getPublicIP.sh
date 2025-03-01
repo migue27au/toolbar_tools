@@ -17,7 +17,7 @@ if [ $public_ip_length -gt 3 ] && [ $public_ip_length -lt 17 ]; then
 	fi
 	echo " <txt><span weight='Bold' fgcolor='$COLOR'>$public_ip1 "
 	echo " $public_ip2 </span></txt>"
-	CMD="/opt/tools/toolbar/copy-public-ip.py"
+	CMD="./copy-public-ip.py"
 	printf "<txtclick>$CMD</txtclick>"
 fi
 
