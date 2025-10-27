@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CMD="./copy-target.py"
+CMD="/home/kali/Documents/tools/toolbar/copy-target.py"
 
 if [[ $1 == "get" ]]; then
 	target_bytes=$(/usr/bin/cat /tmp/target_cmd_target.txt | /usr/bin/wc -c)
